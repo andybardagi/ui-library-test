@@ -6,7 +6,7 @@ import "@your-org/ui-library/styles/index.css";
 
 export default function HomePage() {
   return (
-    <div className="p-8 bg-primary">
+    <div className="p-8 bg-chart-2">
       <Button variant="destructive">Click me from UI Library</Button>
     </div>
   );

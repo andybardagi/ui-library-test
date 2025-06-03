@@ -2,7 +2,8 @@
 @import "tailwindcss";
 @import "@your-org/ui-library/styles/index.css"; /* Import library's base styles */
 
-
+/* Critical for Tailwind v4 to scan classes from the library */
+@source "../../node_modules/@your-org/ui-library/dist/index.css";
 
 :root {
   --background: #ffffff;
