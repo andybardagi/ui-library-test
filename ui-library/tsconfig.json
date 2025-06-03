@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es2020", // Targets modern JavaScript features
+      "lib": ["dom", "dom.iterable", "esnext"], // Includes DOM and ESNext types
+      "allowJs": true, // Allows JavaScript files to be part of the project
+      "skipLibCheck": true, // Skips type checking of all declaration files (*.d.ts)
+      "esModuleInterop": true, // Enables `import * as React from "react"` syntax
+      "allowSyntheticDefaultImports": true, // Allows default imports from modules with no default export
+      "strict": true, // Enables all strict type-checking options
+      "forceConsistentCasingInFileNames": true, // Ensures consistent file casing
+      "noFallthroughCasesInSwitch": true, // Reports errors for fallthrough cases in switch statements
+      "module": "esnext", // Specifies module code generation
+      "moduleResolution": "bundler", // Resolves modules using bundler-specific logic (e.g., Vite/Rollup)
+      "resolveJsonModule": true, // Allows importing.json files
+      "isolatedModules": true, // Ensures each file can be safely transpiled in isolation (important for bundlers)
+      "jsx": "react-jsx", // Supports React JSX syntax
+      "baseUrl": ".", // Base directory for resolving non-relative module names
+      "paths": { // Configures module path aliases
+        "@/components/*": ["./src/components/*"],
+        "@/lib/*": ["./src/lib/*"],
+        "@/styles/*": ["./src/styles/*"]
+      },
+      "outDir": "./dist", // Output directory for compiled files (tsup handles actual emit)
+      "declaration": true, // Generates declaration files for modules (tsup's `dts` flag handles this)
+      "emitDeclarationOnly": false, // Set to false, as tsup handles JS emit; `tsc` won't emit JS
+      "declarationMap": true // Generates source maps for declaration files
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"], // Files to include in compilation
+    "exclude": ["node_modules", "dist"] // Files/directories to exclude
+  }
